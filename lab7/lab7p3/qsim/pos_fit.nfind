@@ -1,0 +1,14 @@
+lab7
+Clk,input,user_entered
+Q,output,user_entered
+R,input,user_entered
+S,input,user_entered
+~ASDO~,input,compiler_generated
+~LVDS150p/nCEO~,output,compiler_generated
+~nCSO~,input,compiler_generated
+part1:comb_3|Qa,comb,user_entered
+part1:comb_3|Qb,comb,user_entered
+part1:comb_3|R_g,comb,user_entered
+part1:comb_3|S_g,comb,user_entered
+,hierarchy,user_entered
+part1:comb_3,hierarchy,user_entered

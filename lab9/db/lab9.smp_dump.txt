@@ -1,0 +1,26 @@
+
+State Machine - |lab9|s_next
+Name s_next.S_SEC_YL s_next.S_SEC_GL_MAX s_next.S_SEC_GL s_next.S_PED_YL s_next.S_PED_GL s_next.S_HWY_YL s_next.S_HWY_GL 
+s_next.S_HWY_GL 0 0 0 0 0 0 0 
+s_next.S_HWY_YL 0 0 0 0 0 1 1 
+s_next.S_PED_GL 0 0 0 0 1 0 1 
+s_next.S_PED_YL 0 0 0 1 0 0 1 
+s_next.S_SEC_GL 0 0 1 0 0 0 1 
+s_next.S_SEC_GL_MAX 0 1 0 0 0 0 1 
+s_next.S_SEC_YL 1 0 0 0 0 0 1 
+
+State Machine - |lab9|s_last_request_order
+Name s_last_request_order.S_NO_REQUEST s_last_request_order.S_PEDESTRIAN_FIRST s_last_request_order.S_SECONDARY_ROAD_FIRST 
+s_last_request_order.S_NO_REQUEST 0 0 0 
+s_last_request_order.S_SECONDARY_ROAD_FIRST 1 0 1 
+s_last_request_order.S_PEDESTRIAN_FIRST 1 1 0 
+
+State Machine - |lab9|s_current
+Name s_current.S_SEC_YL s_current.S_SEC_GL_MAX s_current.S_SEC_GL s_current.S_PED_YL s_current.S_PED_GL s_current.S_HWY_YL s_current.S_HWY_GL 
+s_current.S_HWY_GL 0 0 0 0 0 0 0 
+s_current.S_HWY_YL 0 0 0 0 0 1 1 
+s_current.S_PED_GL 0 0 0 0 1 0 1 
+s_current.S_PED_YL 0 0 0 1 0 0 1 
+s_current.S_SEC_GL 0 0 1 0 0 0 1 
+s_current.S_SEC_GL_MAX 0 1 0 0 0 0 1 
+s_current.S_SEC_YL 1 0 0 0 0 0 1 

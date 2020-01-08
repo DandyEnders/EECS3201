@@ -1,0 +1,757 @@
+Simulator report for lab9
+Wed Nov 27 14:19:36 2019
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 6.0 us       ;
+; Simulation Netlist Size     ; 282 nodes    ;
+; Simulation Coverage         ;      30.03 % ;
+; Total Number of Transitions ; 3528         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                              ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+; Option                                                                                     ; Setting                            ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                             ; Timing        ;
+; Start time                                                                                 ; 0 ns                               ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                ;               ;
+; Vector input source                                                                        ; Z:/3201/lab9/CounterSimulation.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                 ; On            ;
+; Check outputs                                                                              ; Off                                ; Off           ;
+; Report simulation coverage                                                                 ; On                                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                ; Off           ;
+; Detect glitches                                                                            ; Off                                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                               ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      30.03 % ;
+; Total nodes checked                                 ; 282          ;
+; Total output ports checked                          ; 323          ;
+; Total output ports with complete 1/0-value coverage ; 97           ;
+; Total output ports with no 1/0-value coverage       ; 220          ;
+; Total output ports with no 1-value coverage         ; 220          ;
+; Total output ports with no 0-value coverage         ; 226          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                  ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |lab9|s_last_request_order.S_PEDESTRIAN_FIRST~0     ; |lab9|s_last_request_order.S_PEDESTRIAN_FIRST~0     ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[2]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[2]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[1]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[1]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[1]~31  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[1]~31  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[1]~31  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[1]~32  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[2]~33  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[2]~33  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[2]~33  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[2]~34  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]~35  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]~35  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~0         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~0         ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~0         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~1         ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~2         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~2         ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~2         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~3         ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~4         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~4         ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~4         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~5         ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~6         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~6         ; combout          ;
+; |lab9|light_secondroad[3]                           ; |lab9|light_secondroad[3]                           ; regout           ;
+; |lab9|light_secondroad[2]                           ; |lab9|light_secondroad[2]                           ; regout           ;
+; |lab9|light_highway[3]                              ; |lab9|light_highway[3]                              ; regout           ;
+; |lab9|light_highway[2]                              ; |lab9|light_highway[2]                              ; regout           ;
+; |lab9|s_secondary_request                           ; |lab9|s_secondary_request                           ; regout           ;
+; |lab9|light_secondroad[1]                           ; |lab9|light_secondroad[1]                           ; regout           ;
+; |lab9|light_highway[1]                              ; |lab9|light_highway[1]                              ; regout           ;
+; |lab9|s_current.S_SEC_YL                            ; |lab9|s_current.S_SEC_YL                            ; regout           ;
+; |lab9|s_current.S_HWY_YL                            ; |lab9|s_current.S_HWY_YL                            ; regout           ;
+; |lab9|s_current.S_SEC_GL_MAX                        ; |lab9|s_current.S_SEC_GL_MAX                        ; regout           ;
+; |lab9|Selector6~0                                   ; |lab9|Selector6~0                                   ; combout          ;
+; |lab9|s_current.S_SEC_GL                            ; |lab9|s_current.S_SEC_GL                            ; regout           ;
+; |lab9|s_current.S_HWY_GL                            ; |lab9|s_current.S_HWY_GL                            ; regout           ;
+; |lab9|Selector6~1                                   ; |lab9|Selector6~1                                   ; combout          ;
+; |lab9|s_next.S_SEC_YL                               ; |lab9|s_next.S_SEC_YL                               ; regout           ;
+; |lab9|s_next.S_SEC_GL_MAX                           ; |lab9|s_next.S_SEC_GL_MAX                           ; regout           ;
+; |lab9|WideNor0~0                                    ; |lab9|WideNor0~0                                    ; combout          ;
+; |lab9|s_next.S_SEC_GL                               ; |lab9|s_next.S_SEC_GL                               ; regout           ;
+; |lab9|WideNor0~1                                    ; |lab9|WideNor0~1                                    ; combout          ;
+; |lab9|s_next.S_HWY_GL                               ; |lab9|s_next.S_HWY_GL                               ; regout           ;
+; |lab9|always2~0                                     ; |lab9|always2~0                                     ; combout          ;
+; |lab9|s_next.S_HWY_YL                               ; |lab9|s_next.S_HWY_YL                               ; regout           ;
+; |lab9|WideNor0~2                                    ; |lab9|WideNor0~2                                    ; combout          ;
+; |lab9|WideNor0~3                                    ; |lab9|WideNor0~3                                    ; combout          ;
+; |lab9|s_secondary_request~2                         ; |lab9|s_secondary_request~2                         ; combout          ;
+; |lab9|WideOr8~0                                     ; |lab9|WideOr8~0                                     ; combout          ;
+; |lab9|Selector3~0                                   ; |lab9|Selector3~0                                   ; combout          ;
+; |lab9|Selector4~0                                   ; |lab9|Selector4~0                                   ; combout          ;
+; |lab9|WideOr2                                       ; |lab9|WideOr2                                       ; combout          ;
+; |lab9|Selector0~0                                   ; |lab9|Selector0~0                                   ; combout          ;
+; |lab9|Selector1~0                                   ; |lab9|Selector1~0                                   ; combout          ;
+; |lab9|s_secondary_request~3                         ; |lab9|s_secondary_request~3                         ; combout          ;
+; |lab9|s_secondary_request~4                         ; |lab9|s_secondary_request~4                         ; combout          ;
+; |lab9|Selector5~0                                   ; |lab9|Selector5~0                                   ; combout          ;
+; |lab9|Selector2~0                                   ; |lab9|Selector2~0                                   ; combout          ;
+; |lab9|s_next.S_SEC_YL~0                             ; |lab9|s_next.S_SEC_YL~0                             ; combout          ;
+; |lab9|s_next.S_SEC_YL~1                             ; |lab9|s_next.S_SEC_YL~1                             ; combout          ;
+; |lab9|s_next.S_SEC_GL_MAX~0                         ; |lab9|s_next.S_SEC_GL_MAX~0                         ; combout          ;
+; |lab9|s_next.S_SEC_GL~0                             ; |lab9|s_next.S_SEC_GL~0                             ; combout          ;
+; |lab9|s_next.S_SEC_GL_MAX~1                         ; |lab9|s_next.S_SEC_GL_MAX~1                         ; combout          ;
+; |lab9|s_next.S_SEC_GL~1                             ; |lab9|s_next.S_SEC_GL~1                             ; combout          ;
+; |lab9|s_next.S_HWY_GL~0                             ; |lab9|s_next.S_HWY_GL~0                             ; combout          ;
+; |lab9|s_next.S_HWY_GL~1                             ; |lab9|s_next.S_HWY_GL~1                             ; combout          ;
+; |lab9|s_next.S_HWY_YL~0                             ; |lab9|s_next.S_HWY_YL~0                             ; combout          ;
+; |lab9|s_next.S_HWY_YL~1                             ; |lab9|s_next.S_HWY_YL~1                             ; combout          ;
+; |lab9|s_next.S_PED_GL~0                             ; |lab9|s_next.S_PED_GL~0                             ; combout          ;
+; |lab9|s_last_request_order~9                        ; |lab9|s_last_request_order~9                        ; combout          ;
+; |lab9|s_last_request_order~10                       ; |lab9|s_last_request_order~10                       ; combout          ;
+; |lab9|delay[2]                                      ; |lab9|delay[2]                                      ; regout           ;
+; |lab9|delay[1]                                      ; |lab9|delay[1]                                      ; regout           ;
+; |lab9|delay[0]                                      ; |lab9|delay[0]                                      ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[0]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[0]     ; regout           ;
+; |lab9|fireSecDelay:fsc|LessThan1~0                  ; |lab9|fireSecDelay:fsc|LessThan1~0                  ; combout          ;
+; |lab9|fireSecDelay:fsc|LessThan1~1                  ; |lab9|fireSecDelay:fsc|LessThan1~1                  ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~9                      ; |lab9|fireSecDelay:fsc|reset~9                      ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[3]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[3]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[1]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[1]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[2]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[2]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[0]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[0]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~8       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~8       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~9       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~9       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]~37 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]~37 ; combout          ;
+; |lab9|delay~0                                       ; |lab9|delay~0                                       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[0]~94  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[0]~94  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount~0     ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount~0     ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount~1     ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount~1     ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount~2     ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount~2     ; combout          ;
+; |lab9|s_secondary_request~5                         ; |lab9|s_secondary_request~5                         ; combout          ;
+; |lab9|s_next~17                                     ; |lab9|s_next~17                                     ; combout          ;
+; |lab9|Selector9~4                                   ; |lab9|Selector9~4                                   ; combout          ;
+; |lab9|LEDR[4]                                       ; |lab9|LEDR[4]                                       ; padio            ;
+; |lab9|LEDR[6]                                       ; |lab9|LEDR[6]                                       ; padio            ;
+; |lab9|LEDR[8]                                       ; |lab9|LEDR[8]                                       ; padio            ;
+; |lab9|LEDR[10]                                      ; |lab9|LEDR[10]                                      ; padio            ;
+; |lab9|LEDR[17]                                      ; |lab9|LEDR[17]                                      ; padio            ;
+; |lab9|LEDG[2]                                       ; |lab9|LEDG[2]                                       ; padio            ;
+; |lab9|LEDG[4]                                       ; |lab9|LEDG[4]                                       ; padio            ;
+; |lab9|CLOCK_50                                      ; |lab9|CLOCK_50~corein                               ; combout          ;
+; |lab9|SW[0]                                         ; |lab9|SW[0]~corein                                  ; combout          ;
+; |lab9|fireSecDelay:fsc|pulseActive~clkctrl          ; |lab9|fireSecDelay:fsc|pulseActive~clkctrl          ; outclk           ;
+; |lab9|CLOCK_50~clkctrl                              ; |lab9|CLOCK_50~clkctrl                              ; outclk           ;
+; |lab9|s_current.S_SEC_GL~feeder                     ; |lab9|s_current.S_SEC_GL~feeder                     ; combout          ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                     ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |lab9|s_last_request_order.S_PEDESTRIAN_FIRST       ; |lab9|s_last_request_order.S_PEDESTRIAN_FIRST       ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]~35  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]~36  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]~38  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]~38  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]~38  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]~39  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]~40  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]~40  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]~40  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]~41  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]~42  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]~42  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]~42  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]~43  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]~44  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]~44  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]~44  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]~45  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]~46  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]~46  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]~46  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]~47  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]~48  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]~48  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]~48  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]~49  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]~50 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]~50 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]~50 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]~51 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]~52 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]~52 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]~52 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]~53 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]~54 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]~54 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]~54 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]~55 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]~56 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]~56 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]~56 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]~57 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]~58 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]~58 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]~58 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]~59 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]~60 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]~60 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]~60 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]~61 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]~62 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]~62 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]~62 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]~63 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]~64 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]~64 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]~64 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]~65 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]~66 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]~66 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]~66 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]~67 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]~68 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]~68 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]~68 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]~69 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]~70 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]~70 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]~70 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]~71 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]~72 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]~72 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]~72 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]~73 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]~74 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]~74 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]~74 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]~75 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]~76 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]~76 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]~76 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]~77 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]~78 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]~78 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]~78 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]~79 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]~80 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]~80 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]~80 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]~81 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]~82 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]~82 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]~82 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]~83 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]~84 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]~84 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]~84 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]~85 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]~86 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]~86 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]~86 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]~87 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]~88 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]~88 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]~88 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]~89 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]~90 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]~90 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]~90 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]~91 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]~92 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]~92 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~6         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~7         ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~8         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~8         ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~8         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~9         ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~10        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~10        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~10        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~11        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~12        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~12        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~12        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~13        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~14        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~14        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~14        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~15        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~16        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~16        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~16        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~17        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~18        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~18        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~18        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~19        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~20        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~20        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~20        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~21        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~22        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~22        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~22        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~23        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~24        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~24        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~24        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~25        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~26        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~26        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~26        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~27        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~28        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~28        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~28        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~29        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~30        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~30        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~30        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~31        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~32        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~32        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~32        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~33        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~34        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~34        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~34        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~35        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~36        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~36        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~36        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~37        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~38        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~38        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~38        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~39        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~40        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~40        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~40        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~41        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~42        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~42        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~42        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~43        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~44        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~44        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~44        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~45        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~46        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~46        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~46        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~47        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~48        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~48        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~48        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~49        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~50        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~50        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~50        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~51        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~52        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~52        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~52        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~53        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~54        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~54        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~54        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~55        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~56        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~56        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~56        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~57        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~58        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~58        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~58        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~59        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~60        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~60        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~60        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~61        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~62        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~62        ; combout          ;
+; |lab9|light_pedestrian[2]                           ; |lab9|light_pedestrian[2]                           ; regout           ;
+; |lab9|s_pedestrian_request                          ; |lab9|s_pedestrian_request                          ; regout           ;
+; |lab9|light_pedestrian[1]                           ; |lab9|light_pedestrian[1]                           ; regout           ;
+; |lab9|s_next.S_PED_YL                               ; |lab9|s_next.S_PED_YL                               ; regout           ;
+; |lab9|s_current.S_PED_YL                            ; |lab9|s_current.S_PED_YL                            ; regout           ;
+; |lab9|s_next.S_PED_GL                               ; |lab9|s_next.S_PED_GL                               ; regout           ;
+; |lab9|s_current.S_PED_GL                            ; |lab9|s_current.S_PED_GL                            ; regout           ;
+; |lab9|Selector7~0                                   ; |lab9|Selector7~0                                   ; combout          ;
+; |lab9|s_pedestrian_request~4                        ; |lab9|s_pedestrian_request~4                        ; combout          ;
+; |lab9|s_last_request_order~8                        ; |lab9|s_last_request_order~8                        ; combout          ;
+; |lab9|s_pedestrian_request~5                        ; |lab9|s_pedestrian_request~5                        ; combout          ;
+; |lab9|Selector8~0                                   ; |lab9|Selector8~0                                   ; combout          ;
+; |lab9|s_next.S_PED_YL~0                             ; |lab9|s_next.S_PED_YL~0                             ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~0                      ; |lab9|fireSecDelay:fsc|reset~0                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~1                      ; |lab9|fireSecDelay:fsc|reset~1                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~2                      ; |lab9|fireSecDelay:fsc|reset~2                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~3                      ; |lab9|fireSecDelay:fsc|reset~3                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~4                      ; |lab9|fireSecDelay:fsc|reset~4                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~5                      ; |lab9|fireSecDelay:fsc|reset~5                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~6                      ; |lab9|fireSecDelay:fsc|reset~6                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~7                      ; |lab9|fireSecDelay:fsc|reset~7                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~8                      ; |lab9|fireSecDelay:fsc|reset~8                      ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[31]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[31]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[30]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[30]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[29]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[29]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[28]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[28]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~0       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~0       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[27]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[27]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[26]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[26]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[25]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[25]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[24]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[24]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~1       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~1       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[23]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[23]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[22]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[22]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[21]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[21]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[20]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[20]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~2       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~2       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[19]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[19]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[18]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[18]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[17]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[17]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[16]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[16]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~3       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~3       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~4       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~4       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[15]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[15]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[14]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[14]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[13]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[13]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[12]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[12]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~5       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~5       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[11]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[11]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[10]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[10]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[9]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[9]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[8]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[8]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~6       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~6       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[7]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[7]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[6]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[6]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[5]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[5]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[4]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[4]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~7       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~7       ; combout          ;
+; |lab9|s_pedestrian_request~6                        ; |lab9|s_pedestrian_request~6                        ; combout          ;
+; |lab9|LEDR[1]                                       ; |lab9|LEDR[1]                                       ; padio            ;
+; |lab9|LEDR[2]                                       ; |lab9|LEDR[2]                                       ; padio            ;
+; |lab9|LEDR[3]                                       ; |lab9|LEDR[3]                                       ; padio            ;
+; |lab9|LEDR[5]                                       ; |lab9|LEDR[5]                                       ; padio            ;
+; |lab9|LEDR[7]                                       ; |lab9|LEDR[7]                                       ; padio            ;
+; |lab9|LEDR[9]                                       ; |lab9|LEDR[9]                                       ; padio            ;
+; |lab9|LEDR[11]                                      ; |lab9|LEDR[11]                                      ; padio            ;
+; |lab9|LEDR[12]                                      ; |lab9|LEDR[12]                                      ; padio            ;
+; |lab9|LEDR[13]                                      ; |lab9|LEDR[13]                                      ; padio            ;
+; |lab9|LEDR[14]                                      ; |lab9|LEDR[14]                                      ; padio            ;
+; |lab9|LEDR[15]                                      ; |lab9|LEDR[15]                                      ; padio            ;
+; |lab9|LEDR[16]                                      ; |lab9|LEDR[16]                                      ; padio            ;
+; |lab9|LEDG[0]                                       ; |lab9|LEDG[0]                                       ; padio            ;
+; |lab9|LEDG[1]                                       ; |lab9|LEDG[1]                                       ; padio            ;
+; |lab9|LEDG[3]                                       ; |lab9|LEDG[3]                                       ; padio            ;
+; |lab9|LEDG[5]                                       ; |lab9|LEDG[5]                                       ; padio            ;
+; |lab9|LEDG[6]                                       ; |lab9|LEDG[6]                                       ; padio            ;
+; |lab9|LEDG[7]                                       ; |lab9|LEDG[7]                                       ; padio            ;
+; |lab9|KEY[3]                                        ; |lab9|KEY[3]~corein                                 ; combout          ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                     ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |lab9|s_last_request_order.S_PEDESTRIAN_FIRST       ; |lab9|s_last_request_order.S_PEDESTRIAN_FIRST       ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]     ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]     ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]    ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]~35  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[3]~36  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]~38  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]~38  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]~38  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[4]~39  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]~40  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]~40  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]~40  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[5]~41  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]~42  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]~42  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]~42  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[6]~43  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]~44  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]~44  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]~44  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[7]~45  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]~46  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]~46  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]~46  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[8]~47  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]~48  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]~48  ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]~48  ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[9]~49  ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]~50 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]~50 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]~50 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[10]~51 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]~52 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]~52 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]~52 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[11]~53 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]~54 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]~54 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]~54 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[12]~55 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]~56 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]~56 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]~56 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[13]~57 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]~58 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]~58 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]~58 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[14]~59 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]~60 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]~60 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]~60 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[15]~61 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]~62 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]~62 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]~62 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[16]~63 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]~64 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]~64 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]~64 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[17]~65 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]~66 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]~66 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]~66 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[18]~67 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]~68 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]~68 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]~68 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[19]~69 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]~70 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]~70 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]~70 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[20]~71 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]~72 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]~72 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]~72 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[21]~73 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]~74 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]~74 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]~74 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[22]~75 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]~76 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]~76 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]~76 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[23]~77 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]~78 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]~78 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]~78 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[24]~79 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]~80 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]~80 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]~80 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[25]~81 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]~82 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]~82 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]~82 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[26]~83 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]~84 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]~84 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]~84 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[27]~85 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]~86 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]~86 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]~86 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[28]~87 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]~88 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]~88 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]~88 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[29]~89 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]~90 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]~90 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]~90 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[30]~91 ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]~92 ; |lab9|fireSecDelay:fsc|secCounter:sc|seconds[31]~92 ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~6         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~7         ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~8         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~8         ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~8         ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~9         ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~10        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~10        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~10        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~11        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~12        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~12        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~12        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~13        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~14        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~14        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~14        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~15        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~16        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~16        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~16        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~17        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~18        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~18        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~18        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~19        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~20        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~20        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~20        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~21        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~22        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~22        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~22        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~23        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~24        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~24        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~24        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~25        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~26        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~26        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~26        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~27        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~28        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~28        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~28        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~29        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~30        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~30        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~30        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~31        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~32        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~32        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~32        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~33        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~34        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~34        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~34        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~35        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~36        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~36        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~36        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~37        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~38        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~38        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~38        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~39        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~40        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~40        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~40        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~41        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~42        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~42        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~42        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~43        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~44        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~44        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~44        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~45        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~46        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~46        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~46        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~47        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~48        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~48        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~48        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~49        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~50        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~50        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~50        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~51        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~52        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~52        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~52        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~53        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~54        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~54        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~54        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~55        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~56        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~56        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~56        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~57        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~58        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~58        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~58        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~59        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~60        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~60        ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~60        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~61        ; cout             ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~62        ; |lab9|fireSecDelay:fsc|secCounter:sc|Add1~62        ; combout          ;
+; |lab9|light_pedestrian[3]                           ; |lab9|light_pedestrian[3]                           ; regout           ;
+; |lab9|light_pedestrian[2]                           ; |lab9|light_pedestrian[2]                           ; regout           ;
+; |lab9|s_pedestrian_request                          ; |lab9|s_pedestrian_request                          ; regout           ;
+; |lab9|light_pedestrian[1]                           ; |lab9|light_pedestrian[1]                           ; regout           ;
+; |lab9|s_next.S_PED_YL                               ; |lab9|s_next.S_PED_YL                               ; regout           ;
+; |lab9|s_current.S_PED_YL                            ; |lab9|s_current.S_PED_YL                            ; regout           ;
+; |lab9|s_next.S_PED_GL                               ; |lab9|s_next.S_PED_GL                               ; regout           ;
+; |lab9|s_current.S_PED_GL                            ; |lab9|s_current.S_PED_GL                            ; regout           ;
+; |lab9|Selector7~0                                   ; |lab9|Selector7~0                                   ; combout          ;
+; |lab9|s_pedestrian_request~4                        ; |lab9|s_pedestrian_request~4                        ; combout          ;
+; |lab9|s_last_request_order.S_NO_REQUEST             ; |lab9|s_last_request_order.S_NO_REQUEST             ; regout           ;
+; |lab9|s_last_request_order~8                        ; |lab9|s_last_request_order~8                        ; combout          ;
+; |lab9|s_pedestrian_request~5                        ; |lab9|s_pedestrian_request~5                        ; combout          ;
+; |lab9|Selector8~0                                   ; |lab9|Selector8~0                                   ; combout          ;
+; |lab9|s_next.S_PED_YL~0                             ; |lab9|s_next.S_PED_YL~0                             ; combout          ;
+; |lab9|s_last_request_order.S_NO_REQUEST~0           ; |lab9|s_last_request_order.S_NO_REQUEST~0           ; combout          ;
+; |lab9|s_last_request_order.S_NO_REQUEST~1           ; |lab9|s_last_request_order.S_NO_REQUEST~1           ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~0                      ; |lab9|fireSecDelay:fsc|reset~0                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~1                      ; |lab9|fireSecDelay:fsc|reset~1                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~2                      ; |lab9|fireSecDelay:fsc|reset~2                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~3                      ; |lab9|fireSecDelay:fsc|reset~3                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~4                      ; |lab9|fireSecDelay:fsc|reset~4                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~5                      ; |lab9|fireSecDelay:fsc|reset~5                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~6                      ; |lab9|fireSecDelay:fsc|reset~6                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~7                      ; |lab9|fireSecDelay:fsc|reset~7                      ; combout          ;
+; |lab9|fireSecDelay:fsc|reset~8                      ; |lab9|fireSecDelay:fsc|reset~8                      ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[31]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[31]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[30]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[30]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[29]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[29]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[28]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[28]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~0       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~0       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[27]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[27]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[26]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[26]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[25]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[25]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[24]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[24]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~1       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~1       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[23]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[23]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[22]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[22]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[21]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[21]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[20]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[20]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~2       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~2       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[19]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[19]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[18]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[18]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[17]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[17]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[16]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[16]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~3       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~3       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~4       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~4       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[15]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[15]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[14]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[14]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[13]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[13]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[12]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[12]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~5       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~5       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[11]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[11]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[10]   ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[10]   ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[9]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[9]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[8]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[8]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~6       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~6       ; combout          ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[7]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[7]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[6]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[6]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[5]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[5]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[4]    ; |lab9|fireSecDelay:fsc|secCounter:sc|clkCount[4]    ; regout           ;
+; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~7       ; |lab9|fireSecDelay:fsc|secCounter:sc|Equal0~7       ; combout          ;
+; |lab9|s_pedestrian_request~6                        ; |lab9|s_pedestrian_request~6                        ; combout          ;
+; |lab9|LEDR[0]                                       ; |lab9|LEDR[0]                                       ; padio            ;
+; |lab9|LEDR[1]                                       ; |lab9|LEDR[1]                                       ; padio            ;
+; |lab9|LEDR[2]                                       ; |lab9|LEDR[2]                                       ; padio            ;
+; |lab9|LEDR[3]                                       ; |lab9|LEDR[3]                                       ; padio            ;
+; |lab9|LEDR[5]                                       ; |lab9|LEDR[5]                                       ; padio            ;
+; |lab9|LEDR[7]                                       ; |lab9|LEDR[7]                                       ; padio            ;
+; |lab9|LEDR[9]                                       ; |lab9|LEDR[9]                                       ; padio            ;
+; |lab9|LEDR[11]                                      ; |lab9|LEDR[11]                                      ; padio            ;
+; |lab9|LEDR[12]                                      ; |lab9|LEDR[12]                                      ; padio            ;
+; |lab9|LEDR[13]                                      ; |lab9|LEDR[13]                                      ; padio            ;
+; |lab9|LEDR[14]                                      ; |lab9|LEDR[14]                                      ; padio            ;
+; |lab9|LEDR[15]                                      ; |lab9|LEDR[15]                                      ; padio            ;
+; |lab9|LEDR[16]                                      ; |lab9|LEDR[16]                                      ; padio            ;
+; |lab9|LEDG[0]                                       ; |lab9|LEDG[0]                                       ; padio            ;
+; |lab9|LEDG[1]                                       ; |lab9|LEDG[1]                                       ; padio            ;
+; |lab9|LEDG[3]                                       ; |lab9|LEDG[3]                                       ; padio            ;
+; |lab9|LEDG[5]                                       ; |lab9|LEDG[5]                                       ; padio            ;
+; |lab9|LEDG[6]                                       ; |lab9|LEDG[6]                                       ; padio            ;
+; |lab9|LEDG[7]                                       ; |lab9|LEDG[7]                                       ; padio            ;
+; |lab9|KEY[3]                                        ; |lab9|KEY[3]~corein                                 ; combout          ;
+; |lab9|KEY[0]                                        ; |lab9|KEY[0]~corein                                 ; combout          ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 27 14:19:34 2019
+Info: Command: quartus_sim --simulation_results_format=VWF lab9 -c lab9
+Info (324025): Using vector source file "Z:/3201/lab9/CounterSimulation.vwf"
+Warning (328028): Can't display state machine states -- register holding state machine bit "|lab9|s_last_request_order.S_SECONDARY_ROAD_FIRST" was synthesized away
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[62]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[61]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[60]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[59]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[58]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[57]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[56]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[55]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[54]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[53]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[52]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[51]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[50]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[49]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[48]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[47]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[46]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[45]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[44]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[43]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[42]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[41]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[40]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[39]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[38]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[37]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[36]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[35]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[34]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[33]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "fireSecDelay:fsc|secCounter:sc|seconds[32]" in design.
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|KEY[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|KEY[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[8]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[9]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[10]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[11]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[12]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[13]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[14]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[15]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[16]"
+Warning (328012): Can't find signal in vector source file for input pin "|lab9|SW[17]"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      30.03 %
+Info (328052): Number of transitions in simulation is 3528
+Info (324045): Vector file lab9.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 316 megabytes
+    Info: Processing ended: Wed Nov 27 14:19:36 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

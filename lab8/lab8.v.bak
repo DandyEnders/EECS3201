@@ -1,0 +1,47 @@
+/*
+Author: Jinho Hwang
+*/
+
+module SRGatedLatch(
+	input s, r, clk,
+	output Q, Qb
+	);
+	
+	wire s_w, r_w;
+	
+	assign s_w = s & clk;
+	assign r_w = r & clk;
+	assign Q = ~(s_w | Qb);
+	assign Qb = ~(r_w | Q);
+endmodule
+
+module DLatch(
+	input d, clk,
+	output Q, Qb
+	);
+	
+	wire s, r;
+	
+	assign s = d;
+	assign r = ~d;
+	
+	SRGatedLatch latch(s, r, clk, Q, Qb);
+endmodule
+
+module AsyncCounterT(
+	input 
+	);
+
+endmodule
+
+
+module lab8(
+	input [1:0] KEY,
+	input [17:0] SW,
+	output [17:0] LEDR,
+	output [1:0] LEDG,
+	output [0:6] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0
+	);
+	
+	
+endmodule

@@ -1,0 +1,16 @@
+<internal_error>
+<sub_system>ERR</sub_system>
+<callstack>
+	 0xf16955b8: ccl_err + 0xa5b8 (_ZN15ERR_STACKWALKER15get_stack_traceEPPKviiPv + 0x90)
+	 0xf169876b: ccl_err + 0xd76b (_Z14err_terminatorv + 0x8a)
+	 0xeefbf07e: dinkum_alt + 0x1707e (_ZSt9terminatev + 0x1e)
+	 0xee053a41: stdc++.so.6 + 0xb0a41
+	 0xf1698c23: ccl_err + 0xdc23 (err_sigaction_handler + 0x7d)
+	 0xf7790410:  + 0x410 (__kernel_rt_sigreturn + 0)
+	 0xf6d7089b: sld_sdr + 0x3489b (_ZNK19SDR_DATA_SIGNAL_SET19get_data_wire_widthEv + 0x7)
+</callstack>
+<error>*** Fatal Error: Unhandled Exception</error>
+<date>Wed Oct 30 12:25:35 2019
+</date>
+<version>Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition</version>
+</internal_error>

@@ -1,0 +1,12 @@
+module gatedSRlatch(
+	input s, r, clk, clear, preset,
+	output q, qb
+);
+
+always@(clk, clear, preset)
+begin
+	if(clear)
+		q <= 0; qb <= 1;
+end
+
+endmodule

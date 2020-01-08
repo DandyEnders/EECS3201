@@ -1,0 +1,1404 @@
+|lab7
+KEY[0] => asyncReset.IN1
+KEY[1] => clock.IN1
+SW[0] => D[0].IN1
+SW[1] => D[1].IN1
+SW[2] => D[2].IN1
+SW[3] => D[3].IN1
+SW[4] => D[4].IN1
+SW[5] => D[5].IN1
+SW[6] => D[6].IN1
+SW[7] => D[7].IN1
+SW[8] => D[8].IN1
+SW[9] => D[9].IN1
+SW[10] => D[10].IN1
+SW[11] => D[11].IN1
+SW[12] => D[12].IN1
+SW[13] => D[13].IN1
+SW[14] => D[14].IN1
+SW[15] => D[15].IN1
+SW[16] => ~NO_FANOUT~
+SW[17] => ABswitch.IN1
+LEDR[0] <= <GND>
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= <GND>
+LEDR[15] <= <GND>
+LEDR[16] <= <GND>
+LEDR[17] <= <GND>
+LEDG[0] <= asyncReset.DB_MAX_OUTPUT_PORT_TYPE
+LEDG[1] <= clock.DB_MAX_OUTPUT_PORT_TYPE
+HEX7[6] <= fourDigTo7Seg:comb_25.port1
+HEX7[5] <= fourDigTo7Seg:comb_25.port1
+HEX7[4] <= fourDigTo7Seg:comb_25.port1
+HEX7[3] <= fourDigTo7Seg:comb_25.port1
+HEX7[2] <= fourDigTo7Seg:comb_25.port1
+HEX7[1] <= fourDigTo7Seg:comb_25.port1
+HEX7[0] <= fourDigTo7Seg:comb_25.port1
+HEX6[6] <= fourDigTo7Seg:comb_25.port2
+HEX6[5] <= fourDigTo7Seg:comb_25.port2
+HEX6[4] <= fourDigTo7Seg:comb_25.port2
+HEX6[3] <= fourDigTo7Seg:comb_25.port2
+HEX6[2] <= fourDigTo7Seg:comb_25.port2
+HEX6[1] <= fourDigTo7Seg:comb_25.port2
+HEX6[0] <= fourDigTo7Seg:comb_25.port2
+HEX5[6] <= fourDigTo7Seg:comb_25.port3
+HEX5[5] <= fourDigTo7Seg:comb_25.port3
+HEX5[4] <= fourDigTo7Seg:comb_25.port3
+HEX5[3] <= fourDigTo7Seg:comb_25.port3
+HEX5[2] <= fourDigTo7Seg:comb_25.port3
+HEX5[1] <= fourDigTo7Seg:comb_25.port3
+HEX5[0] <= fourDigTo7Seg:comb_25.port3
+HEX4[6] <= fourDigTo7Seg:comb_25.port4
+HEX4[5] <= fourDigTo7Seg:comb_25.port4
+HEX4[4] <= fourDigTo7Seg:comb_25.port4
+HEX4[3] <= fourDigTo7Seg:comb_25.port4
+HEX4[2] <= fourDigTo7Seg:comb_25.port4
+HEX4[1] <= fourDigTo7Seg:comb_25.port4
+HEX4[0] <= fourDigTo7Seg:comb_25.port4
+HEX3[6] <= fourDigTo7Seg:comb_26.port1
+HEX3[5] <= fourDigTo7Seg:comb_26.port1
+HEX3[4] <= fourDigTo7Seg:comb_26.port1
+HEX3[3] <= fourDigTo7Seg:comb_26.port1
+HEX3[2] <= fourDigTo7Seg:comb_26.port1
+HEX3[1] <= fourDigTo7Seg:comb_26.port1
+HEX3[0] <= fourDigTo7Seg:comb_26.port1
+HEX2[6] <= fourDigTo7Seg:comb_26.port2
+HEX2[5] <= fourDigTo7Seg:comb_26.port2
+HEX2[4] <= fourDigTo7Seg:comb_26.port2
+HEX2[3] <= fourDigTo7Seg:comb_26.port2
+HEX2[2] <= fourDigTo7Seg:comb_26.port2
+HEX2[1] <= fourDigTo7Seg:comb_26.port2
+HEX2[0] <= fourDigTo7Seg:comb_26.port2
+HEX1[6] <= fourDigTo7Seg:comb_26.port3
+HEX1[5] <= fourDigTo7Seg:comb_26.port3
+HEX1[4] <= fourDigTo7Seg:comb_26.port3
+HEX1[3] <= fourDigTo7Seg:comb_26.port3
+HEX1[2] <= fourDigTo7Seg:comb_26.port3
+HEX1[1] <= fourDigTo7Seg:comb_26.port3
+HEX1[0] <= fourDigTo7Seg:comb_26.port3
+HEX0[6] <= fourDigTo7Seg:comb_26.port4
+HEX0[5] <= fourDigTo7Seg:comb_26.port4
+HEX0[4] <= fourDigTo7Seg:comb_26.port4
+HEX0[3] <= fourDigTo7Seg:comb_26.port4
+HEX0[2] <= fourDigTo7Seg:comb_26.port4
+HEX0[1] <= fourDigTo7Seg:comb_26.port4
+HEX0[0] <= fourDigTo7Seg:comb_26.port4
+
+
+|lab7|part5:comb_24
+Clock => Aclock.DATAB
+Clock => Bclock.DATAA
+D[0] => CPMSDFlipFlop:ffA[0].D
+D[0] => CPMSDFlipFlop:ffB[0].D
+D[1] => CPMSDFlipFlop:ffA[1].D
+D[1] => CPMSDFlipFlop:ffB[1].D
+D[2] => CPMSDFlipFlop:ffA[2].D
+D[2] => CPMSDFlipFlop:ffB[2].D
+D[3] => CPMSDFlipFlop:ffA[3].D
+D[3] => CPMSDFlipFlop:ffB[3].D
+D[4] => CPMSDFlipFlop:ffA[4].D
+D[4] => CPMSDFlipFlop:ffB[4].D
+D[5] => CPMSDFlipFlop:ffA[5].D
+D[5] => CPMSDFlipFlop:ffB[5].D
+D[6] => CPMSDFlipFlop:ffA[6].D
+D[6] => CPMSDFlipFlop:ffB[6].D
+D[7] => CPMSDFlipFlop:ffA[7].D
+D[7] => CPMSDFlipFlop:ffB[7].D
+D[8] => CPMSDFlipFlop:ffA[8].D
+D[8] => CPMSDFlipFlop:ffB[8].D
+D[9] => CPMSDFlipFlop:ffA[9].D
+D[9] => CPMSDFlipFlop:ffB[9].D
+D[10] => CPMSDFlipFlop:ffA[10].D
+D[10] => CPMSDFlipFlop:ffB[10].D
+D[11] => CPMSDFlipFlop:ffA[11].D
+D[11] => CPMSDFlipFlop:ffB[11].D
+D[12] => CPMSDFlipFlop:ffA[12].D
+D[12] => CPMSDFlipFlop:ffB[12].D
+D[13] => CPMSDFlipFlop:ffA[13].D
+D[13] => CPMSDFlipFlop:ffB[13].D
+D[14] => CPMSDFlipFlop:ffA[14].D
+D[14] => CPMSDFlipFlop:ffB[14].D
+D[15] => CPMSDFlipFlop:ffA[15].D
+D[15] => CPMSDFlipFlop:ffB[15].D
+ABswitch => Aclock.OUTPUTSELECT
+ABswitch => Bclock.OUTPUTSELECT
+asyncReset => CPMSDFlipFlop:ffA[0].clear
+asyncReset => CPMSDFlipFlop:ffA[1].clear
+asyncReset => CPMSDFlipFlop:ffA[2].clear
+asyncReset => CPMSDFlipFlop:ffA[3].clear
+asyncReset => CPMSDFlipFlop:ffA[4].clear
+asyncReset => CPMSDFlipFlop:ffA[5].clear
+asyncReset => CPMSDFlipFlop:ffA[6].clear
+asyncReset => CPMSDFlipFlop:ffA[7].clear
+asyncReset => CPMSDFlipFlop:ffA[8].clear
+asyncReset => CPMSDFlipFlop:ffA[9].clear
+asyncReset => CPMSDFlipFlop:ffA[10].clear
+asyncReset => CPMSDFlipFlop:ffA[11].clear
+asyncReset => CPMSDFlipFlop:ffA[12].clear
+asyncReset => CPMSDFlipFlop:ffA[13].clear
+asyncReset => CPMSDFlipFlop:ffA[14].clear
+asyncReset => CPMSDFlipFlop:ffA[15].clear
+asyncReset => CPMSDFlipFlop:ffB[0].clear
+asyncReset => CPMSDFlipFlop:ffB[1].clear
+asyncReset => CPMSDFlipFlop:ffB[2].clear
+asyncReset => CPMSDFlipFlop:ffB[3].clear
+asyncReset => CPMSDFlipFlop:ffB[4].clear
+asyncReset => CPMSDFlipFlop:ffB[5].clear
+asyncReset => CPMSDFlipFlop:ffB[6].clear
+asyncReset => CPMSDFlipFlop:ffB[7].clear
+asyncReset => CPMSDFlipFlop:ffB[8].clear
+asyncReset => CPMSDFlipFlop:ffB[9].clear
+asyncReset => CPMSDFlipFlop:ffB[10].clear
+asyncReset => CPMSDFlipFlop:ffB[11].clear
+asyncReset => CPMSDFlipFlop:ffB[12].clear
+asyncReset => CPMSDFlipFlop:ffB[13].clear
+asyncReset => CPMSDFlipFlop:ffB[14].clear
+asyncReset => CPMSDFlipFlop:ffB[15].clear
+Qa[0] <= CPMSDFlipFlop:ffA[0].Q
+Qa[1] <= CPMSDFlipFlop:ffA[1].Q
+Qa[2] <= CPMSDFlipFlop:ffA[2].Q
+Qa[3] <= CPMSDFlipFlop:ffA[3].Q
+Qa[4] <= CPMSDFlipFlop:ffA[4].Q
+Qa[5] <= CPMSDFlipFlop:ffA[5].Q
+Qa[6] <= CPMSDFlipFlop:ffA[6].Q
+Qa[7] <= CPMSDFlipFlop:ffA[7].Q
+Qa[8] <= CPMSDFlipFlop:ffA[8].Q
+Qa[9] <= CPMSDFlipFlop:ffA[9].Q
+Qa[10] <= CPMSDFlipFlop:ffA[10].Q
+Qa[11] <= CPMSDFlipFlop:ffA[11].Q
+Qa[12] <= CPMSDFlipFlop:ffA[12].Q
+Qa[13] <= CPMSDFlipFlop:ffA[13].Q
+Qa[14] <= CPMSDFlipFlop:ffA[14].Q
+Qa[15] <= CPMSDFlipFlop:ffA[15].Q
+Qb[0] <= CPMSDFlipFlop:ffB[0].Q
+Qb[1] <= CPMSDFlipFlop:ffB[1].Q
+Qb[2] <= CPMSDFlipFlop:ffB[2].Q
+Qb[3] <= CPMSDFlipFlop:ffB[3].Q
+Qb[4] <= CPMSDFlipFlop:ffB[4].Q
+Qb[5] <= CPMSDFlipFlop:ffB[5].Q
+Qb[6] <= CPMSDFlipFlop:ffB[6].Q
+Qb[7] <= CPMSDFlipFlop:ffB[7].Q
+Qb[8] <= CPMSDFlipFlop:ffB[8].Q
+Qb[9] <= CPMSDFlipFlop:ffB[9].Q
+Qb[10] <= CPMSDFlipFlop:ffB[10].Q
+Qb[11] <= CPMSDFlipFlop:ffB[11].Q
+Qb[12] <= CPMSDFlipFlop:ffB[12].Q
+Qb[13] <= CPMSDFlipFlop:ffB[13].Q
+Qb[14] <= CPMSDFlipFlop:ffB[14].Q
+Qb[15] <= CPMSDFlipFlop:ffB[15].Q
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[0]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[0]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[0]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[1]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[1]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[1]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[2]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[2]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[2]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[3]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[3]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[3]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[4]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[4]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[4]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[5]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[5]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[5]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[6]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[6]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[6]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[7]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[7]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[7]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[8]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[8]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[8]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[9]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[9]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[9]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[10]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[10]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[10]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[11]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[11]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[11]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[12]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[12]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[12]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[13]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[13]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[13]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[14]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[14]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[14]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[15]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[15]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffA[15]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[0]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[0]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[0]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[1]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[1]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[1]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[2]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[2]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[2]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[3]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[3]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[3]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[4]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[4]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[4]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[5]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[5]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[5]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[6]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[6]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[6]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[7]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[7]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[7]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[8]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[8]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[8]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[9]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[9]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[9]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[10]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[10]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[10]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[11]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[11]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[11]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[12]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[12]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[12]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[13]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[13]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[13]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[14]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[14]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[14]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[15]
+Clock => Clock.IN1
+D => D.IN1
+Q <= CPDLatch:slave.port2
+preset => preset.IN2
+clear => clear.IN2
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[15]|CPDLatch:master
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|part5:comb_24|CPMSDFlipFlop:ffB[15]|CPDLatch:slave
+Clk => R_g.IN0
+Clk => S_g.IN0
+D => S_g.IN1
+D => R_g.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+preset => Qa.IN1
+clear => Qb.IN1
+
+
+|lab7|fourDigTo7Seg:comb_25
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+D[8] => D[8].IN1
+D[9] => D[9].IN1
+D[10] => D[10].IN1
+D[11] => D[11].IN1
+D[12] => D[12].IN1
+D[13] => D[13].IN1
+D[14] => D[14].IN1
+D[15] => D[15].IN1
+ledBig[6] <= twoDigTo7Seg:comb_3.port1
+ledBig[5] <= twoDigTo7Seg:comb_3.port1
+ledBig[4] <= twoDigTo7Seg:comb_3.port1
+ledBig[3] <= twoDigTo7Seg:comb_3.port1
+ledBig[2] <= twoDigTo7Seg:comb_3.port1
+ledBig[1] <= twoDigTo7Seg:comb_3.port1
+ledBig[0] <= twoDigTo7Seg:comb_3.port1
+ledLessBig[6] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[5] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[4] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[3] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[2] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[1] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[0] <= twoDigTo7Seg:comb_3.port2
+ledLessSmall[6] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[5] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[4] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[3] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[2] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[1] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[0] <= twoDigTo7Seg:comb_4.port1
+ledSmall[6] <= twoDigTo7Seg:comb_4.port2
+ledSmall[5] <= twoDigTo7Seg:comb_4.port2
+ledSmall[4] <= twoDigTo7Seg:comb_4.port2
+ledSmall[3] <= twoDigTo7Seg:comb_4.port2
+ledSmall[2] <= twoDigTo7Seg:comb_4.port2
+ledSmall[1] <= twoDigTo7Seg:comb_4.port2
+ledSmall[0] <= twoDigTo7Seg:comb_4.port2
+
+
+|lab7|fourDigTo7Seg:comb_25|twoDigTo7Seg:comb_3
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+ledBig[6] <= sevenSeg:DBig.port1
+ledBig[5] <= sevenSeg:DBig.port1
+ledBig[4] <= sevenSeg:DBig.port1
+ledBig[3] <= sevenSeg:DBig.port1
+ledBig[2] <= sevenSeg:DBig.port1
+ledBig[1] <= sevenSeg:DBig.port1
+ledBig[0] <= sevenSeg:DBig.port1
+ledSmall[6] <= sevenSeg:DSmall.port1
+ledSmall[5] <= sevenSeg:DSmall.port1
+ledSmall[4] <= sevenSeg:DSmall.port1
+ledSmall[3] <= sevenSeg:DSmall.port1
+ledSmall[2] <= sevenSeg:DSmall.port1
+ledSmall[1] <= sevenSeg:DSmall.port1
+ledSmall[0] <= sevenSeg:DSmall.port1
+
+
+|lab7|fourDigTo7Seg:comb_25|twoDigTo7Seg:comb_3|sevenSeg:DBig
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|fourDigTo7Seg:comb_25|twoDigTo7Seg:comb_3|sevenSeg:DSmall
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|fourDigTo7Seg:comb_25|twoDigTo7Seg:comb_4
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+ledBig[6] <= sevenSeg:DBig.port1
+ledBig[5] <= sevenSeg:DBig.port1
+ledBig[4] <= sevenSeg:DBig.port1
+ledBig[3] <= sevenSeg:DBig.port1
+ledBig[2] <= sevenSeg:DBig.port1
+ledBig[1] <= sevenSeg:DBig.port1
+ledBig[0] <= sevenSeg:DBig.port1
+ledSmall[6] <= sevenSeg:DSmall.port1
+ledSmall[5] <= sevenSeg:DSmall.port1
+ledSmall[4] <= sevenSeg:DSmall.port1
+ledSmall[3] <= sevenSeg:DSmall.port1
+ledSmall[2] <= sevenSeg:DSmall.port1
+ledSmall[1] <= sevenSeg:DSmall.port1
+ledSmall[0] <= sevenSeg:DSmall.port1
+
+
+|lab7|fourDigTo7Seg:comb_25|twoDigTo7Seg:comb_4|sevenSeg:DBig
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|fourDigTo7Seg:comb_25|twoDigTo7Seg:comb_4|sevenSeg:DSmall
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|fourDigTo7Seg:comb_26
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+D[8] => D[8].IN1
+D[9] => D[9].IN1
+D[10] => D[10].IN1
+D[11] => D[11].IN1
+D[12] => D[12].IN1
+D[13] => D[13].IN1
+D[14] => D[14].IN1
+D[15] => D[15].IN1
+ledBig[6] <= twoDigTo7Seg:comb_3.port1
+ledBig[5] <= twoDigTo7Seg:comb_3.port1
+ledBig[4] <= twoDigTo7Seg:comb_3.port1
+ledBig[3] <= twoDigTo7Seg:comb_3.port1
+ledBig[2] <= twoDigTo7Seg:comb_3.port1
+ledBig[1] <= twoDigTo7Seg:comb_3.port1
+ledBig[0] <= twoDigTo7Seg:comb_3.port1
+ledLessBig[6] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[5] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[4] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[3] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[2] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[1] <= twoDigTo7Seg:comb_3.port2
+ledLessBig[0] <= twoDigTo7Seg:comb_3.port2
+ledLessSmall[6] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[5] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[4] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[3] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[2] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[1] <= twoDigTo7Seg:comb_4.port1
+ledLessSmall[0] <= twoDigTo7Seg:comb_4.port1
+ledSmall[6] <= twoDigTo7Seg:comb_4.port2
+ledSmall[5] <= twoDigTo7Seg:comb_4.port2
+ledSmall[4] <= twoDigTo7Seg:comb_4.port2
+ledSmall[3] <= twoDigTo7Seg:comb_4.port2
+ledSmall[2] <= twoDigTo7Seg:comb_4.port2
+ledSmall[1] <= twoDigTo7Seg:comb_4.port2
+ledSmall[0] <= twoDigTo7Seg:comb_4.port2
+
+
+|lab7|fourDigTo7Seg:comb_26|twoDigTo7Seg:comb_3
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+ledBig[6] <= sevenSeg:DBig.port1
+ledBig[5] <= sevenSeg:DBig.port1
+ledBig[4] <= sevenSeg:DBig.port1
+ledBig[3] <= sevenSeg:DBig.port1
+ledBig[2] <= sevenSeg:DBig.port1
+ledBig[1] <= sevenSeg:DBig.port1
+ledBig[0] <= sevenSeg:DBig.port1
+ledSmall[6] <= sevenSeg:DSmall.port1
+ledSmall[5] <= sevenSeg:DSmall.port1
+ledSmall[4] <= sevenSeg:DSmall.port1
+ledSmall[3] <= sevenSeg:DSmall.port1
+ledSmall[2] <= sevenSeg:DSmall.port1
+ledSmall[1] <= sevenSeg:DSmall.port1
+ledSmall[0] <= sevenSeg:DSmall.port1
+
+
+|lab7|fourDigTo7Seg:comb_26|twoDigTo7Seg:comb_3|sevenSeg:DBig
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|fourDigTo7Seg:comb_26|twoDigTo7Seg:comb_3|sevenSeg:DSmall
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|fourDigTo7Seg:comb_26|twoDigTo7Seg:comb_4
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+D[4] => D[4].IN1
+D[5] => D[5].IN1
+D[6] => D[6].IN1
+D[7] => D[7].IN1
+ledBig[6] <= sevenSeg:DBig.port1
+ledBig[5] <= sevenSeg:DBig.port1
+ledBig[4] <= sevenSeg:DBig.port1
+ledBig[3] <= sevenSeg:DBig.port1
+ledBig[2] <= sevenSeg:DBig.port1
+ledBig[1] <= sevenSeg:DBig.port1
+ledBig[0] <= sevenSeg:DBig.port1
+ledSmall[6] <= sevenSeg:DSmall.port1
+ledSmall[5] <= sevenSeg:DSmall.port1
+ledSmall[4] <= sevenSeg:DSmall.port1
+ledSmall[3] <= sevenSeg:DSmall.port1
+ledSmall[2] <= sevenSeg:DSmall.port1
+ledSmall[1] <= sevenSeg:DSmall.port1
+ledSmall[0] <= sevenSeg:DSmall.port1
+
+
+|lab7|fourDigTo7Seg:comb_26|twoDigTo7Seg:comb_4|sevenSeg:DBig
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab7|fourDigTo7Seg:comb_26|twoDigTo7Seg:comb_4|sevenSeg:DSmall
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+led[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

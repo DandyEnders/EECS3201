@@ -1,0 +1,228 @@
+|lab8
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+SW[0] => En[0].IN2
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => SW[12].IN1
+SW[13] => SW[13].IN1
+SW[14] => SW[14].IN1
+SW[15] => SW[15].IN1
+SW[16] => SW[16].IN1
+SW[17] => SW[17].IN1
+CLOCK_50 => clk.IN1
+LEDR[0] <= SyncCounter:scf1.port2
+LEDR[1] <= SyncCounter:scf1.port2
+LEDR[2] <= SyncCounter:scf1.port2
+LEDR[3] <= SyncCounter:scf1.port2
+LEDR[4] <= SyncCounter:scf2.port2
+LEDR[5] <= SyncCounter:scf2.port2
+LEDR[6] <= SyncCounter:scf2.port2
+LEDR[7] <= SyncCounter:scf2.port2
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= LFSR:lfsr.port4
+LEDR[13] <= LFSR:lfsr.port4
+LEDR[14] <= LFSR:lfsr.port4
+LEDR[15] <= LFSR:lfsr.port4
+LEDR[16] <= LFSR:lfsr.port4
+LEDR[17] <= <GND>
+LEDG[0] <= <GND>
+LEDG[1] <= <GND>
+HEX7[6] <= <GND>
+HEX7[5] <= <GND>
+HEX7[4] <= <GND>
+HEX7[3] <= <GND>
+HEX7[2] <= <GND>
+HEX7[1] <= <GND>
+HEX7[0] <= <GND>
+HEX6[6] <= <GND>
+HEX6[5] <= <GND>
+HEX6[4] <= <GND>
+HEX6[3] <= <GND>
+HEX6[2] <= <GND>
+HEX6[1] <= <GND>
+HEX6[0] <= <GND>
+HEX5[6] <= <GND>
+HEX5[5] <= <GND>
+HEX5[4] <= <GND>
+HEX5[3] <= <GND>
+HEX5[2] <= <GND>
+HEX5[1] <= <GND>
+HEX5[0] <= <GND>
+HEX4[6] <= <GND>
+HEX4[5] <= <GND>
+HEX4[4] <= <GND>
+HEX4[3] <= <GND>
+HEX4[2] <= <GND>
+HEX4[1] <= <GND>
+HEX4[0] <= <GND>
+HEX3[6] <= <GND>
+HEX3[5] <= <GND>
+HEX3[4] <= <GND>
+HEX3[3] <= <GND>
+HEX3[2] <= <GND>
+HEX3[1] <= <GND>
+HEX3[0] <= <GND>
+HEX2[6] <= <GND>
+HEX2[5] <= <GND>
+HEX2[4] <= <GND>
+HEX2[3] <= <GND>
+HEX2[2] <= <GND>
+HEX2[1] <= <GND>
+HEX2[0] <= <GND>
+HEX1[6] <= <GND>
+HEX1[5] <= <GND>
+HEX1[4] <= <GND>
+HEX1[3] <= <GND>
+HEX1[2] <= <GND>
+HEX1[1] <= <GND>
+HEX1[0] <= <GND>
+HEX0[6] <= <GND>
+HEX0[5] <= <GND>
+HEX0[4] <= <GND>
+HEX0[3] <= <GND>
+HEX0[2] <= <GND>
+HEX0[1] <= <GND>
+HEX0[0] <= <GND>
+
+
+|lab8|SyncCounter:scf1
+En => T[0].IN1
+Clock => Clock.IN4
+Q[0] <= TFlipFlop:comb_4.port2
+Q[1] <= TFlipFlop:comb_6.port2
+Q[2] <= TFlipFlop:comb_8.port2
+Q[3] <= TFlipFlop:comb_10.port2
+z[0] <= T.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= <GND>
+z[2] <= <GND>
+z[3] <= <GND>
+
+
+|lab8|SyncCounter:scf1|TFlipFlop:comb_4
+T => Qb~reg0.ENA
+T => Q~reg0.ENA
+clk => Qb~reg0.CLK
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab8|SyncCounter:scf1|TFlipFlop:comb_6
+T => Qb~reg0.ENA
+T => Q~reg0.ENA
+clk => Qb~reg0.CLK
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab8|SyncCounter:scf1|TFlipFlop:comb_8
+T => Qb~reg0.ENA
+T => Q~reg0.ENA
+clk => Qb~reg0.CLK
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab8|SyncCounter:scf1|TFlipFlop:comb_10
+T => Qb~reg0.ENA
+T => Q~reg0.ENA
+clk => Qb~reg0.CLK
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab8|SyncCounter:scf2
+En => T[0].IN1
+Clock => Clock.IN4
+Q[0] <= TFlipFlop:comb_4.port2
+Q[1] <= TFlipFlop:comb_6.port2
+Q[2] <= TFlipFlop:comb_8.port2
+Q[3] <= TFlipFlop:comb_10.port2
+z[0] <= T.DB_MAX_OUTPUT_PORT_TYPE
+z[1] <= <GND>
+z[2] <= <GND>
+z[3] <= <GND>
+
+
+|lab8|SyncCounter:scf2|TFlipFlop:comb_4
+T => Qb~reg0.ENA
+T => Q~reg0.ENA
+clk => Qb~reg0.CLK
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab8|SyncCounter:scf2|TFlipFlop:comb_6
+T => Qb~reg0.ENA
+T => Q~reg0.ENA
+clk => Qb~reg0.CLK
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab8|SyncCounter:scf2|TFlipFlop:comb_8
+T => Qb~reg0.ENA
+T => Q~reg0.ENA
+clk => Qb~reg0.CLK
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab8|SyncCounter:scf2|TFlipFlop:comb_10
+T => Qb~reg0.ENA
+T => Q~reg0.ENA
+clk => Qb~reg0.CLK
+clk => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= Qb~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab8|LFSR:lfsr
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+clock => Q[4]~reg0.CLK
+asyncPreset => Q[0]~reg0.PRESET
+asyncPreset => Q[1]~reg0.PRESET
+asyncPreset => Q[2]~reg0.PRESET
+asyncPreset => Q[3]~reg0.PRESET
+asyncPreset => Q[4]~reg0.PRESET
+shiftLoad => Q.OUTPUTSELECT
+shiftLoad => Q.OUTPUTSELECT
+shiftLoad => Q.OUTPUTSELECT
+shiftLoad => Q.OUTPUTSELECT
+shiftLoad => Q.OUTPUTSELECT
+parallelIn[0] => Q.DATAA
+parallelIn[1] => Q.DATAA
+parallelIn[2] => Q.DATAA
+parallelIn[3] => Q.DATAA
+parallelIn[4] => Q.DATAA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

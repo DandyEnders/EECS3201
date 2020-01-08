@@ -1,0 +1,416 @@
+Simulator report for lt2
+Wed Nov 27 19:31:32 2019
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 152 nodes    ;
+; Simulation Coverage         ;      16.54 % ;
+; Total Number of Transitions ; 393          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                                                     ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                       ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                        ;               ;
+; Vector input source                                                                        ; /eecs/home/howden2/3201/labtest/labtest2pract/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                         ; On            ;
+; Check outputs                                                                              ; Off                                                        ; Off           ;
+; Report simulation coverage                                                                 ; On                                                         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                         ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                         ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                         ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                        ; Off           ;
+; Detect glitches                                                                            ; Off                                                        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                        ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                 ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      16.54 % ;
+; Total nodes checked                                 ; 152          ;
+; Total output ports checked                          ; 133          ;
+; Total output ports with complete 1/0-value coverage ; 22           ;
+; Total output ports with no 1/0-value coverage       ; 110          ;
+; Total output ports with no 1-value coverage         ; 110          ;
+; Total output ports with no 0-value coverage         ; 111          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                          ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                       ; Output Port Name                                                                                ; Output Port Type ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; |lt2|Equal0~0                                                                                   ; |lt2|Equal0~0                                                                                   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D[0]~0                                                               ; |lt2|SyncDLoadCounter:mycc|D[0]~0                                                               ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~1                                                                  ; |lt2|SyncDLoadCounter:mycc|D~1                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D[1]~2                                                               ; |lt2|SyncDLoadCounter:mycc|D[1]~2                                                               ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D[2]~3                                                               ; |lt2|SyncDLoadCounter:mycc|D[2]~3                                                               ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D[2]~4                                                               ; |lt2|SyncDLoadCounter:mycc|D[2]~4                                                               ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|LEDR[0]                                                                                    ; |lt2|LEDR[0]                                                                                    ; padio            ;
+; |lt2|LEDR[1]                                                                                    ; |lt2|LEDR[1]                                                                                    ; padio            ;
+; |lt2|LEDR[2]                                                                                    ; |lt2|LEDR[2]                                                                                    ; padio            ;
+; |lt2|KEY[0]                                                                                     ; |lt2|KEY[0]~corein                                                                              ; combout          ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                       ; Output Port Name                                                                                ; Output Port Type ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; |lt2|Equal0~1                                                                                   ; |lt2|Equal0~1                                                                                   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|In[3]                                                                ; |lt2|SyncDLoadCounter:mycc|In[3]                                                                ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~5                                                                  ; |lt2|SyncDLoadCounter:mycc|D~5                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~6                                                                  ; |lt2|SyncDLoadCounter:mycc|D~6                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~7                                                                  ; |lt2|SyncDLoadCounter:mycc|D~7                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~8                                                                  ; |lt2|SyncDLoadCounter:mycc|D~8                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~9                                                                  ; |lt2|SyncDLoadCounter:mycc|D~9                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~10                                                                 ; |lt2|SyncDLoadCounter:mycc|D~10                                                                 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~11                                                                 ; |lt2|SyncDLoadCounter:mycc|D~11                                                                 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|LEDR[3]                                                                                    ; |lt2|LEDR[3]                                                                                    ; padio            ;
+; |lt2|LEDR[4]                                                                                    ; |lt2|LEDR[4]                                                                                    ; padio            ;
+; |lt2|LEDR[5]                                                                                    ; |lt2|LEDR[5]                                                                                    ; padio            ;
+; |lt2|LEDR[6]                                                                                    ; |lt2|LEDR[6]                                                                                    ; padio            ;
+; |lt2|LEDR[7]                                                                                    ; |lt2|LEDR[7]                                                                                    ; padio            ;
+; |lt2|LEDR[8]                                                                                    ; |lt2|LEDR[8]                                                                                    ; padio            ;
+; |lt2|LEDR[9]                                                                                    ; |lt2|LEDR[9]                                                                                    ; padio            ;
+; |lt2|LEDR[10]                                                                                   ; |lt2|LEDR[10]                                                                                   ; padio            ;
+; |lt2|LEDR[11]                                                                                   ; |lt2|LEDR[11]                                                                                   ; padio            ;
+; |lt2|LEDR[12]                                                                                   ; |lt2|LEDR[12]                                                                                   ; padio            ;
+; |lt2|LEDR[13]                                                                                   ; |lt2|LEDR[13]                                                                                   ; padio            ;
+; |lt2|LEDR[14]                                                                                   ; |lt2|LEDR[14]                                                                                   ; padio            ;
+; |lt2|LEDR[15]                                                                                   ; |lt2|LEDR[15]                                                                                   ; padio            ;
+; |lt2|LEDR[16]                                                                                   ; |lt2|LEDR[16]                                                                                   ; padio            ;
+; |lt2|LEDR[17]                                                                                   ; |lt2|LEDR[17]                                                                                   ; padio            ;
+; |lt2|LEDG[0]                                                                                    ; |lt2|LEDG[0]                                                                                    ; padio            ;
+; |lt2|LEDG[1]                                                                                    ; |lt2|LEDG[1]                                                                                    ; padio            ;
+; |lt2|LEDG[2]                                                                                    ; |lt2|LEDG[2]                                                                                    ; padio            ;
+; |lt2|LEDG[3]                                                                                    ; |lt2|LEDG[3]                                                                                    ; padio            ;
+; |lt2|LEDG[4]                                                                                    ; |lt2|LEDG[4]                                                                                    ; padio            ;
+; |lt2|LEDG[5]                                                                                    ; |lt2|LEDG[5]                                                                                    ; padio            ;
+; |lt2|LEDG[6]                                                                                    ; |lt2|LEDG[6]                                                                                    ; padio            ;
+; |lt2|LEDG[7]                                                                                    ; |lt2|LEDG[7]                                                                                    ; padio            ;
+; |lt2|HEX7[6]                                                                                    ; |lt2|HEX7[6]                                                                                    ; padio            ;
+; |lt2|HEX7[5]                                                                                    ; |lt2|HEX7[5]                                                                                    ; padio            ;
+; |lt2|HEX7[4]                                                                                    ; |lt2|HEX7[4]                                                                                    ; padio            ;
+; |lt2|HEX7[3]                                                                                    ; |lt2|HEX7[3]                                                                                    ; padio            ;
+; |lt2|HEX7[2]                                                                                    ; |lt2|HEX7[2]                                                                                    ; padio            ;
+; |lt2|HEX7[1]                                                                                    ; |lt2|HEX7[1]                                                                                    ; padio            ;
+; |lt2|HEX7[0]                                                                                    ; |lt2|HEX7[0]                                                                                    ; padio            ;
+; |lt2|HEX6[6]                                                                                    ; |lt2|HEX6[6]                                                                                    ; padio            ;
+; |lt2|HEX6[5]                                                                                    ; |lt2|HEX6[5]                                                                                    ; padio            ;
+; |lt2|HEX6[4]                                                                                    ; |lt2|HEX6[4]                                                                                    ; padio            ;
+; |lt2|HEX6[3]                                                                                    ; |lt2|HEX6[3]                                                                                    ; padio            ;
+; |lt2|HEX6[2]                                                                                    ; |lt2|HEX6[2]                                                                                    ; padio            ;
+; |lt2|HEX6[1]                                                                                    ; |lt2|HEX6[1]                                                                                    ; padio            ;
+; |lt2|HEX6[0]                                                                                    ; |lt2|HEX6[0]                                                                                    ; padio            ;
+; |lt2|HEX5[6]                                                                                    ; |lt2|HEX5[6]                                                                                    ; padio            ;
+; |lt2|HEX5[5]                                                                                    ; |lt2|HEX5[5]                                                                                    ; padio            ;
+; |lt2|HEX5[4]                                                                                    ; |lt2|HEX5[4]                                                                                    ; padio            ;
+; |lt2|HEX5[3]                                                                                    ; |lt2|HEX5[3]                                                                                    ; padio            ;
+; |lt2|HEX5[2]                                                                                    ; |lt2|HEX5[2]                                                                                    ; padio            ;
+; |lt2|HEX5[1]                                                                                    ; |lt2|HEX5[1]                                                                                    ; padio            ;
+; |lt2|HEX5[0]                                                                                    ; |lt2|HEX5[0]                                                                                    ; padio            ;
+; |lt2|HEX4[6]                                                                                    ; |lt2|HEX4[6]                                                                                    ; padio            ;
+; |lt2|HEX4[5]                                                                                    ; |lt2|HEX4[5]                                                                                    ; padio            ;
+; |lt2|HEX4[4]                                                                                    ; |lt2|HEX4[4]                                                                                    ; padio            ;
+; |lt2|HEX4[3]                                                                                    ; |lt2|HEX4[3]                                                                                    ; padio            ;
+; |lt2|HEX4[2]                                                                                    ; |lt2|HEX4[2]                                                                                    ; padio            ;
+; |lt2|HEX4[1]                                                                                    ; |lt2|HEX4[1]                                                                                    ; padio            ;
+; |lt2|HEX4[0]                                                                                    ; |lt2|HEX4[0]                                                                                    ; padio            ;
+; |lt2|HEX3[6]                                                                                    ; |lt2|HEX3[6]                                                                                    ; padio            ;
+; |lt2|HEX3[5]                                                                                    ; |lt2|HEX3[5]                                                                                    ; padio            ;
+; |lt2|HEX3[4]                                                                                    ; |lt2|HEX3[4]                                                                                    ; padio            ;
+; |lt2|HEX3[3]                                                                                    ; |lt2|HEX3[3]                                                                                    ; padio            ;
+; |lt2|HEX3[2]                                                                                    ; |lt2|HEX3[2]                                                                                    ; padio            ;
+; |lt2|HEX3[1]                                                                                    ; |lt2|HEX3[1]                                                                                    ; padio            ;
+; |lt2|HEX3[0]                                                                                    ; |lt2|HEX3[0]                                                                                    ; padio            ;
+; |lt2|HEX2[6]                                                                                    ; |lt2|HEX2[6]                                                                                    ; padio            ;
+; |lt2|HEX2[5]                                                                                    ; |lt2|HEX2[5]                                                                                    ; padio            ;
+; |lt2|HEX2[4]                                                                                    ; |lt2|HEX2[4]                                                                                    ; padio            ;
+; |lt2|HEX2[3]                                                                                    ; |lt2|HEX2[3]                                                                                    ; padio            ;
+; |lt2|HEX2[2]                                                                                    ; |lt2|HEX2[2]                                                                                    ; padio            ;
+; |lt2|HEX2[1]                                                                                    ; |lt2|HEX2[1]                                                                                    ; padio            ;
+; |lt2|HEX2[0]                                                                                    ; |lt2|HEX2[0]                                                                                    ; padio            ;
+; |lt2|HEX1[6]                                                                                    ; |lt2|HEX1[6]                                                                                    ; padio            ;
+; |lt2|HEX1[5]                                                                                    ; |lt2|HEX1[5]                                                                                    ; padio            ;
+; |lt2|HEX1[4]                                                                                    ; |lt2|HEX1[4]                                                                                    ; padio            ;
+; |lt2|HEX1[3]                                                                                    ; |lt2|HEX1[3]                                                                                    ; padio            ;
+; |lt2|HEX1[2]                                                                                    ; |lt2|HEX1[2]                                                                                    ; padio            ;
+; |lt2|HEX1[1]                                                                                    ; |lt2|HEX1[1]                                                                                    ; padio            ;
+; |lt2|HEX1[0]                                                                                    ; |lt2|HEX1[0]                                                                                    ; padio            ;
+; |lt2|HEX0[6]                                                                                    ; |lt2|HEX0[6]                                                                                    ; padio            ;
+; |lt2|HEX0[5]                                                                                    ; |lt2|HEX0[5]                                                                                    ; padio            ;
+; |lt2|HEX0[4]                                                                                    ; |lt2|HEX0[4]                                                                                    ; padio            ;
+; |lt2|HEX0[3]                                                                                    ; |lt2|HEX0[3]                                                                                    ; padio            ;
+; |lt2|HEX0[2]                                                                                    ; |lt2|HEX0[2]                                                                                    ; padio            ;
+; |lt2|HEX0[1]                                                                                    ; |lt2|HEX0[1]                                                                                    ; padio            ;
+; |lt2|HEX0[0]                                                                                    ; |lt2|HEX0[0]                                                                                    ; padio            ;
+; |lt2|KEY[1]                                                                                     ; |lt2|KEY[1]~corein                                                                              ; combout          ;
+; |lt2|SW[0]                                                                                      ; |lt2|SW[0]~corein                                                                               ; combout          ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                       ; Output Port Name                                                                                ; Output Port Type ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+; |lt2|Equal0~1                                                                                   ; |lt2|Equal0~1                                                                                   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|In[3]                                                                ; |lt2|SyncDLoadCounter:mycc|In[3]                                                                ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~5                                                                  ; |lt2|SyncDLoadCounter:mycc|D~5                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~6                                                                  ; |lt2|SyncDLoadCounter:mycc|D~6                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~7                                                                  ; |lt2|SyncDLoadCounter:mycc|D~7                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~8                                                                  ; |lt2|SyncDLoadCounter:mycc|D~8                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~9                                                                  ; |lt2|SyncDLoadCounter:mycc|D~9                                                                  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~10                                                                 ; |lt2|SyncDLoadCounter:mycc|D~10                                                                 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|D~11                                                                 ; |lt2|SyncDLoadCounter:mycc|D~11                                                                 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave|gatedSRlatch:lat|q    ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave|gatedSRlatch:lat|q~0  ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master|gatedSRlatch:lat|q   ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master|gatedSRlatch:lat|q   ; combout          ;
+; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; |lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master|gatedSRlatch:lat|q~0 ; combout          ;
+; |lt2|LEDR[3]                                                                                    ; |lt2|LEDR[3]                                                                                    ; padio            ;
+; |lt2|LEDR[4]                                                                                    ; |lt2|LEDR[4]                                                                                    ; padio            ;
+; |lt2|LEDR[5]                                                                                    ; |lt2|LEDR[5]                                                                                    ; padio            ;
+; |lt2|LEDR[6]                                                                                    ; |lt2|LEDR[6]                                                                                    ; padio            ;
+; |lt2|LEDR[7]                                                                                    ; |lt2|LEDR[7]                                                                                    ; padio            ;
+; |lt2|LEDR[8]                                                                                    ; |lt2|LEDR[8]                                                                                    ; padio            ;
+; |lt2|LEDR[9]                                                                                    ; |lt2|LEDR[9]                                                                                    ; padio            ;
+; |lt2|LEDR[10]                                                                                   ; |lt2|LEDR[10]                                                                                   ; padio            ;
+; |lt2|LEDR[11]                                                                                   ; |lt2|LEDR[11]                                                                                   ; padio            ;
+; |lt2|LEDR[12]                                                                                   ; |lt2|LEDR[12]                                                                                   ; padio            ;
+; |lt2|LEDR[13]                                                                                   ; |lt2|LEDR[13]                                                                                   ; padio            ;
+; |lt2|LEDR[14]                                                                                   ; |lt2|LEDR[14]                                                                                   ; padio            ;
+; |lt2|LEDR[15]                                                                                   ; |lt2|LEDR[15]                                                                                   ; padio            ;
+; |lt2|LEDR[16]                                                                                   ; |lt2|LEDR[16]                                                                                   ; padio            ;
+; |lt2|LEDR[17]                                                                                   ; |lt2|LEDR[17]                                                                                   ; padio            ;
+; |lt2|LEDG[0]                                                                                    ; |lt2|LEDG[0]                                                                                    ; padio            ;
+; |lt2|LEDG[1]                                                                                    ; |lt2|LEDG[1]                                                                                    ; padio            ;
+; |lt2|LEDG[2]                                                                                    ; |lt2|LEDG[2]                                                                                    ; padio            ;
+; |lt2|LEDG[3]                                                                                    ; |lt2|LEDG[3]                                                                                    ; padio            ;
+; |lt2|LEDG[4]                                                                                    ; |lt2|LEDG[4]                                                                                    ; padio            ;
+; |lt2|LEDG[5]                                                                                    ; |lt2|LEDG[5]                                                                                    ; padio            ;
+; |lt2|LEDG[6]                                                                                    ; |lt2|LEDG[6]                                                                                    ; padio            ;
+; |lt2|LEDG[7]                                                                                    ; |lt2|LEDG[7]                                                                                    ; padio            ;
+; |lt2|HEX7[6]                                                                                    ; |lt2|HEX7[6]                                                                                    ; padio            ;
+; |lt2|HEX7[5]                                                                                    ; |lt2|HEX7[5]                                                                                    ; padio            ;
+; |lt2|HEX7[4]                                                                                    ; |lt2|HEX7[4]                                                                                    ; padio            ;
+; |lt2|HEX7[3]                                                                                    ; |lt2|HEX7[3]                                                                                    ; padio            ;
+; |lt2|HEX7[2]                                                                                    ; |lt2|HEX7[2]                                                                                    ; padio            ;
+; |lt2|HEX7[1]                                                                                    ; |lt2|HEX7[1]                                                                                    ; padio            ;
+; |lt2|HEX7[0]                                                                                    ; |lt2|HEX7[0]                                                                                    ; padio            ;
+; |lt2|HEX6[6]                                                                                    ; |lt2|HEX6[6]                                                                                    ; padio            ;
+; |lt2|HEX6[5]                                                                                    ; |lt2|HEX6[5]                                                                                    ; padio            ;
+; |lt2|HEX6[4]                                                                                    ; |lt2|HEX6[4]                                                                                    ; padio            ;
+; |lt2|HEX6[3]                                                                                    ; |lt2|HEX6[3]                                                                                    ; padio            ;
+; |lt2|HEX6[2]                                                                                    ; |lt2|HEX6[2]                                                                                    ; padio            ;
+; |lt2|HEX6[1]                                                                                    ; |lt2|HEX6[1]                                                                                    ; padio            ;
+; |lt2|HEX6[0]                                                                                    ; |lt2|HEX6[0]                                                                                    ; padio            ;
+; |lt2|HEX5[6]                                                                                    ; |lt2|HEX5[6]                                                                                    ; padio            ;
+; |lt2|HEX5[5]                                                                                    ; |lt2|HEX5[5]                                                                                    ; padio            ;
+; |lt2|HEX5[4]                                                                                    ; |lt2|HEX5[4]                                                                                    ; padio            ;
+; |lt2|HEX5[3]                                                                                    ; |lt2|HEX5[3]                                                                                    ; padio            ;
+; |lt2|HEX5[2]                                                                                    ; |lt2|HEX5[2]                                                                                    ; padio            ;
+; |lt2|HEX5[1]                                                                                    ; |lt2|HEX5[1]                                                                                    ; padio            ;
+; |lt2|HEX5[0]                                                                                    ; |lt2|HEX5[0]                                                                                    ; padio            ;
+; |lt2|HEX4[6]                                                                                    ; |lt2|HEX4[6]                                                                                    ; padio            ;
+; |lt2|HEX4[5]                                                                                    ; |lt2|HEX4[5]                                                                                    ; padio            ;
+; |lt2|HEX4[4]                                                                                    ; |lt2|HEX4[4]                                                                                    ; padio            ;
+; |lt2|HEX4[3]                                                                                    ; |lt2|HEX4[3]                                                                                    ; padio            ;
+; |lt2|HEX4[2]                                                                                    ; |lt2|HEX4[2]                                                                                    ; padio            ;
+; |lt2|HEX4[1]                                                                                    ; |lt2|HEX4[1]                                                                                    ; padio            ;
+; |lt2|HEX4[0]                                                                                    ; |lt2|HEX4[0]                                                                                    ; padio            ;
+; |lt2|HEX3[6]                                                                                    ; |lt2|HEX3[6]                                                                                    ; padio            ;
+; |lt2|HEX3[5]                                                                                    ; |lt2|HEX3[5]                                                                                    ; padio            ;
+; |lt2|HEX3[4]                                                                                    ; |lt2|HEX3[4]                                                                                    ; padio            ;
+; |lt2|HEX3[3]                                                                                    ; |lt2|HEX3[3]                                                                                    ; padio            ;
+; |lt2|HEX3[2]                                                                                    ; |lt2|HEX3[2]                                                                                    ; padio            ;
+; |lt2|HEX3[1]                                                                                    ; |lt2|HEX3[1]                                                                                    ; padio            ;
+; |lt2|HEX3[0]                                                                                    ; |lt2|HEX3[0]                                                                                    ; padio            ;
+; |lt2|HEX2[6]                                                                                    ; |lt2|HEX2[6]                                                                                    ; padio            ;
+; |lt2|HEX2[5]                                                                                    ; |lt2|HEX2[5]                                                                                    ; padio            ;
+; |lt2|HEX2[4]                                                                                    ; |lt2|HEX2[4]                                                                                    ; padio            ;
+; |lt2|HEX2[3]                                                                                    ; |lt2|HEX2[3]                                                                                    ; padio            ;
+; |lt2|HEX2[2]                                                                                    ; |lt2|HEX2[2]                                                                                    ; padio            ;
+; |lt2|HEX2[1]                                                                                    ; |lt2|HEX2[1]                                                                                    ; padio            ;
+; |lt2|HEX2[0]                                                                                    ; |lt2|HEX2[0]                                                                                    ; padio            ;
+; |lt2|HEX1[6]                                                                                    ; |lt2|HEX1[6]                                                                                    ; padio            ;
+; |lt2|HEX1[5]                                                                                    ; |lt2|HEX1[5]                                                                                    ; padio            ;
+; |lt2|HEX1[4]                                                                                    ; |lt2|HEX1[4]                                                                                    ; padio            ;
+; |lt2|HEX1[3]                                                                                    ; |lt2|HEX1[3]                                                                                    ; padio            ;
+; |lt2|HEX1[2]                                                                                    ; |lt2|HEX1[2]                                                                                    ; padio            ;
+; |lt2|HEX1[1]                                                                                    ; |lt2|HEX1[1]                                                                                    ; padio            ;
+; |lt2|HEX1[0]                                                                                    ; |lt2|HEX1[0]                                                                                    ; padio            ;
+; |lt2|HEX0[6]                                                                                    ; |lt2|HEX0[6]                                                                                    ; padio            ;
+; |lt2|HEX0[5]                                                                                    ; |lt2|HEX0[5]                                                                                    ; padio            ;
+; |lt2|HEX0[4]                                                                                    ; |lt2|HEX0[4]                                                                                    ; padio            ;
+; |lt2|HEX0[3]                                                                                    ; |lt2|HEX0[3]                                                                                    ; padio            ;
+; |lt2|HEX0[2]                                                                                    ; |lt2|HEX0[2]                                                                                    ; padio            ;
+; |lt2|HEX0[1]                                                                                    ; |lt2|HEX0[1]                                                                                    ; padio            ;
+; |lt2|HEX0[0]                                                                                    ; |lt2|HEX0[0]                                                                                    ; padio            ;
+; |lt2|KEY[2]                                                                                     ; |lt2|KEY[2]~corein                                                                              ; combout          ;
+; |lt2|KEY[1]                                                                                     ; |lt2|KEY[1]~corein                                                                              ; combout          ;
+; |lt2|SW[0]                                                                                      ; |lt2|SW[0]~corein                                                                               ; combout          ;
++-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 27 19:31:31 2019
+Info: Command: quartus_sim --simulation_results_format=VWF lt2 -c lt2
+Info (324025): Using vector source file "/eecs/home/howden2/3201/labtest/labtest2pract/Waveform.vwf"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|KEY[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|SW[9]"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|SW[10]"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|SW[11]"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|SW[12]"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|SW[13]"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|SW[14]"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|SW[15]"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|SW[16]"
+Warning (328012): Can't find signal in vector source file for input pin "|lt2|CLOCK_50"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      16.54 %
+Info (328052): Number of transitions in simulation is 393
+Info (324045): Vector file lt2.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 274 megabytes
+    Info: Processing ended: Wed Nov 27 19:31:32 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

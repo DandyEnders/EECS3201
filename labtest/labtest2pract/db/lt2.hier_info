@@ -1,0 +1,636 @@
+|lt2
+KEY[0] => clk.IN1
+KEY[1] => preset.IN1
+KEY[2] => clear.IN1
+KEY[3] => ~NO_FANOUT~
+SW[0] => SW[0].IN1
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
+CLOCK_50 => ~NO_FANOUT~
+LEDR[0] <= SyncDLoadCounter:mycc.port6
+LEDR[1] <= SyncDLoadCounter:mycc.port6
+LEDR[2] <= SyncDLoadCounter:mycc.port6
+LEDR[3] <= SyncDLoadCounter:mycc.port6
+LEDR[4] <= SyncDLoadCounter:mycc.port6
+LEDR[5] <= SyncDLoadCounter:mycc.port6
+LEDR[6] <= SyncDLoadCounter:mycc.port6
+LEDR[7] <= SyncDLoadCounter:mycc.port6
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= <GND>
+LEDR[15] <= <GND>
+LEDR[16] <= <GND>
+LEDR[17] <= <GND>
+LEDG[0] <= <GND>
+LEDG[1] <= <GND>
+LEDG[2] <= <GND>
+LEDG[3] <= <GND>
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
+HEX7[6] <= <GND>
+HEX7[5] <= <GND>
+HEX7[4] <= <GND>
+HEX7[3] <= <GND>
+HEX7[2] <= <GND>
+HEX7[1] <= <GND>
+HEX7[0] <= <GND>
+HEX6[6] <= <GND>
+HEX6[5] <= <GND>
+HEX6[4] <= <GND>
+HEX6[3] <= <GND>
+HEX6[2] <= <GND>
+HEX6[1] <= <GND>
+HEX6[0] <= <GND>
+HEX5[6] <= <GND>
+HEX5[5] <= <GND>
+HEX5[4] <= <GND>
+HEX5[3] <= <GND>
+HEX5[2] <= <GND>
+HEX5[1] <= <GND>
+HEX5[0] <= <GND>
+HEX4[6] <= <GND>
+HEX4[5] <= <GND>
+HEX4[4] <= <GND>
+HEX4[3] <= <GND>
+HEX4[2] <= <GND>
+HEX4[1] <= <GND>
+HEX4[0] <= <GND>
+HEX3[6] <= <GND>
+HEX3[5] <= <GND>
+HEX3[4] <= <GND>
+HEX3[3] <= <GND>
+HEX3[2] <= <GND>
+HEX3[1] <= <GND>
+HEX3[0] <= <GND>
+HEX2[6] <= <GND>
+HEX2[5] <= <GND>
+HEX2[4] <= <GND>
+HEX2[3] <= <GND>
+HEX2[2] <= <GND>
+HEX2[1] <= <GND>
+HEX2[0] <= <GND>
+HEX1[6] <= <GND>
+HEX1[5] <= <GND>
+HEX1[4] <= <GND>
+HEX1[3] <= <GND>
+HEX1[2] <= <GND>
+HEX1[1] <= <GND>
+HEX1[0] <= <GND>
+HEX0[6] <= <GND>
+HEX0[5] <= <GND>
+HEX0[4] <= <GND>
+HEX0[3] <= <GND>
+HEX0[2] <= <GND>
+HEX0[1] <= <GND>
+HEX0[0] <= <GND>
+
+
+|lt2|SyncDLoadCounter:mycc
+enable => D.IN1
+enable => In[1].IN1
+clk => clk.IN8
+clear => clear.IN8
+preset => preset.IN8
+parallelIn[0] => D.DATAB
+parallelIn[1] => D.DATAB
+parallelIn[2] => D.DATAB
+parallelIn[3] => D.DATAB
+parallelIn[4] => D.DATAB
+parallelIn[5] => D.DATAB
+parallelIn[6] => D.DATAB
+parallelIn[7] => D.DATAB
+load[0] => WideOr0.IN0
+load[0] => WideOr1.IN0
+load[0] => WideOr2.IN0
+load[0] => WideOr3.IN0
+load[0] => WideOr4.IN0
+load[0] => WideOr5.IN0
+load[0] => WideOr6.IN0
+load[0] => WideOr7.IN0
+load[1] => WideOr0.IN1
+load[1] => WideOr1.IN1
+load[1] => WideOr2.IN1
+load[1] => WideOr3.IN1
+load[1] => WideOr4.IN1
+load[1] => WideOr5.IN1
+load[1] => WideOr6.IN1
+load[1] => WideOr7.IN1
+load[2] => WideOr0.IN2
+load[2] => WideOr1.IN2
+load[2] => WideOr2.IN2
+load[2] => WideOr3.IN2
+load[2] => WideOr4.IN2
+load[2] => WideOr5.IN2
+load[2] => WideOr6.IN2
+load[2] => WideOr7.IN2
+load[3] => WideOr0.IN3
+load[3] => WideOr1.IN3
+load[3] => WideOr2.IN3
+load[3] => WideOr3.IN3
+load[3] => WideOr4.IN3
+load[3] => WideOr5.IN3
+load[3] => WideOr6.IN3
+load[3] => WideOr7.IN3
+load[4] => WideOr0.IN4
+load[4] => WideOr1.IN4
+load[4] => WideOr2.IN4
+load[4] => WideOr3.IN4
+load[4] => WideOr4.IN4
+load[4] => WideOr5.IN4
+load[4] => WideOr6.IN4
+load[4] => WideOr7.IN4
+load[5] => WideOr0.IN5
+load[5] => WideOr1.IN5
+load[5] => WideOr2.IN5
+load[5] => WideOr3.IN5
+load[5] => WideOr4.IN5
+load[5] => WideOr5.IN5
+load[5] => WideOr6.IN5
+load[5] => WideOr7.IN5
+load[6] => WideOr0.IN6
+load[6] => WideOr1.IN6
+load[6] => WideOr2.IN6
+load[6] => WideOr3.IN6
+load[6] => WideOr4.IN6
+load[6] => WideOr5.IN6
+load[6] => WideOr6.IN6
+load[6] => WideOr7.IN6
+load[7] => WideOr0.IN7
+load[7] => WideOr1.IN7
+load[7] => WideOr2.IN7
+load[7] => WideOr3.IN7
+load[7] => WideOr4.IN7
+load[7] => WideOr5.IN7
+load[7] => WideOr6.IN7
+load[7] => WideOr7.IN7
+Q[0] <= PosEmsff:myDffSyncCount[0].mydff.port4
+Q[1] <= PosEmsff:myDffSyncCount[1].mydff.port4
+Q[2] <= PosEmsff:myDffSyncCount[2].mydff.port4
+Q[3] <= PosEmsff:myDffSyncCount[3].mydff.port4
+Q[4] <= PosEmsff:myDffSyncCount[4].mydff.port4
+Q[5] <= PosEmsff:myDffSyncCount[5].mydff.port4
+Q[6] <= PosEmsff:myDffSyncCount[6].mydff.port4
+Q[7] <= PosEmsff:myDffSyncCount[7].mydff.port4
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff
+d => d.IN1
+clk => clk.IN1
+clear => clear.IN2
+preset => preset.IN2
+q <= ddlatch:slave.port4
+qb <= ddlatch:slave.port5
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:master
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:master|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:slave
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[0].mydff|ddlatch:slave|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff
+d => d.IN1
+clk => clk.IN1
+clear => clear.IN2
+preset => preset.IN2
+q <= ddlatch:slave.port4
+qb <= ddlatch:slave.port5
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:master
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:master|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:slave
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[1].mydff|ddlatch:slave|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff
+d => d.IN1
+clk => clk.IN1
+clear => clear.IN2
+preset => preset.IN2
+q <= ddlatch:slave.port4
+qb <= ddlatch:slave.port5
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:master
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:master|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:slave
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[2].mydff|ddlatch:slave|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff
+d => d.IN1
+clk => clk.IN1
+clear => clear.IN2
+preset => preset.IN2
+q <= ddlatch:slave.port4
+qb <= ddlatch:slave.port5
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:master|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[3].mydff|ddlatch:slave|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff
+d => d.IN1
+clk => clk.IN1
+clear => clear.IN2
+preset => preset.IN2
+q <= ddlatch:slave.port4
+qb <= ddlatch:slave.port5
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:master|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[4].mydff|ddlatch:slave|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff
+d => d.IN1
+clk => clk.IN1
+clear => clear.IN2
+preset => preset.IN2
+q <= ddlatch:slave.port4
+qb <= ddlatch:slave.port5
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:master|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[5].mydff|ddlatch:slave|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff
+d => d.IN1
+clk => clk.IN1
+clear => clear.IN2
+preset => preset.IN2
+q <= ddlatch:slave.port4
+qb <= ddlatch:slave.port5
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:master|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[6].mydff|ddlatch:slave|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff
+d => d.IN1
+clk => clk.IN1
+clear => clear.IN2
+preset => preset.IN2
+q <= ddlatch:slave.port4
+qb <= ddlatch:slave.port5
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:master|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave
+d => s.IN1
+clk => clk.IN1
+clear => clear.IN1
+preset => preset.IN1
+q <= gatedSRlatch:lat.port5
+qb <= gatedSRlatch:lat.port6
+
+
+|lt2|SyncDLoadCounter:mycc|PosEmsff:myDffSyncCount[7].mydff|ddlatch:slave|gatedSRlatch:lat
+s => q.IN0
+s => q$latch.DATAIN
+s => qb$latch.DATAIN
+r => q.IN1
+clk => q.IN1
+clear => comb.IN1
+clear => q.IN0
+clear => comb.IN1
+preset => q.IN1
+q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qb <= qb$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

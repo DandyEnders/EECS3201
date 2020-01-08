@@ -1,0 +1,14 @@
+module lab9(
+	input [3:0] KEY,
+	input [17:0] SW,
+	input CLOCK_50,
+	output [17:0] LEDR,
+	output [1:0] LEDG,
+	output [0:6] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0
+	);
+	
+	wire clk;
+	
+	assign clk = CLOCK_50;
+	
+endmodule

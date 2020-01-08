@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Oct 30 10:49:58 2019
+Quartus II 32-bit Version : 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition
+Revision Name : signaltab
+Top-level Entity Name : signaltab
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 542 / 33,216 ( 2 % )
+    Total combinational functions : 395 / 33,216 ( 1 % )
+    Dedicated logic registers : 417 / 33,216 ( 1 % )
+Total registers : 417
+Total pins : 5 / 475 ( 1 % )
+Total virtual pins : 0
+Total memory bits : 1,280 / 483,840 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
